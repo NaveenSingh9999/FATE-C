@@ -45,6 +45,10 @@ class BaseModel(ABC):
         trainer = Trainer(self, self.optimizer, self.loss_fn)
         return trainer.fit(x, y, epochs, batch_size, val)
     
+    def predict(self, x):
+        """Make predictions on input data."""
+        return self.forward(x)
+    
     def get_parameters(self):
         """Get all trainable parameters."""
         return {}

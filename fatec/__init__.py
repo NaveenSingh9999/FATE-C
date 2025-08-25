@@ -1,17 +1,19 @@
 """
 FATE-C: Universal Neural Network Designer & Compiler
+Enhanced with intelligent neurons and diverse data support.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 # Core imports for flat API
 from .core.tensor import Tensor
 from .core.autograd import grad, no_grad
 from .core import ops
 
-# Neuron system
+# Neuron system (enhanced)
 from .neurons.registry import neuron, get_neuron
 from .neurons.activations import *
+from .neurons.intelligent import SmartReLU, AdaptiveSigmoid, IntelligentNeuron
 
 # Layers
 from .layers.dense import Dense
@@ -22,8 +24,12 @@ from .layers.base import Layer
 from .models.sequential import Sequential
 from .models.base import BaseModel
 
-# Training
+# Training (enhanced)
 from .training.trainer import Trainer
+from .training.enhanced import EnhancedTrainer
+
+# Data loading
+from .data.loaders import CSVLoader, TXTLoader
 
 # Optimizers
 from .optim.sgd import SGD
