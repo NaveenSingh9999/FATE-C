@@ -55,14 +55,14 @@ class Dense(Layer):
         self.dropout_rate = dropout_rate
         
         # Store config
-        self.config.update({
-            'units': units,
-            'activation': activation,
-            'use_bias': use_bias,
-            'kernel_initializer': kernel_initializer,
-            'bias_initializer': bias_initializer,
-            'dropout_rate': dropout_rate
-        })
+        self.config.update(
+            units=units,
+            activation=activation,
+            use_bias=use_bias,
+            kernel_initializer=kernel_initializer,
+            bias_initializer=bias_initializer,
+            dropout_rate=dropout_rate
+        )
         
         # Parameters (initialized in build)
         self.weight = None
@@ -161,14 +161,14 @@ class Dense(Layer):
     def get_config(self):
         """Get layer configuration for serialization."""
         config = super().get_config()
-        config.update({
-            'units': self.units,
-            'activation': self.activation,
-            'use_bias': self.use_bias,
-            'kernel_initializer': self.kernel_initializer,
-            'bias_initializer': self.bias_initializer,
-            'dropout_rate': self.dropout_rate
-        })
+        config.update(
+            units=self.units,
+            activation=self.activation,
+            use_bias=self.use_bias,
+            kernel_initializer=self.kernel_initializer,
+            bias_initializer=self.bias_initializer,
+            dropout_rate=self.dropout_rate
+        )
         return config
     
     def count_params(self):

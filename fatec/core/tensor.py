@@ -35,7 +35,7 @@ class Tensor:
             self.data = data.data.copy()  # Deep copy for safety
             self.requires_grad = requires_grad or data.requires_grad
             self.device = device or data.device
-            self.dtype = dtype or data.dtype
+            # dtype is determined by self.data.dtype via property
         else:
             try:
                 self.data = np.asarray(data, dtype=dtype)
@@ -44,7 +44,7 @@ class Tensor:
             
             self.requires_grad = requires_grad
             self.device = device
-            self.dtype = self.data.dtype
+            # dtype is determined by self.data.dtype via property
         
         # Metadata
         self.name = name
