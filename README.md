@@ -1,7 +1,7 @@
 # FATE-C  
 Universal Neuron → Layer → Network Designer & Compiler
 
-> Design custom neurons, assemble layers, build simple or complex (sequential / graph / multi-model) neural systems in pure Python in 10–20 lines. Run them in the lightweight FATE-C math engine or export to PyTorch / TensorFlow / JAX / ONNX — without rewriting.
+> Design custom neurons, assemble layers, build simple or complex (sequential / graph / multi-model) neural systems in pure Python in 10x easier way. Run them in the lightweight FATE-C math engine or export to PyTorch / TensorFlow / JAX / ONNX — without rewriting.
 
 ---
 
@@ -15,7 +15,7 @@ Make neural architecture creation as simple as writing plain Python functions wh
 | Progressive Complexity | Ladder: Sequential → Custom forward → Graph/DAG → Multi-model | Beginners stay productive; experts not boxed in |
 | Universal Portability | One definition → compile/export anywhere | Reduce reimplementation & vendor lock |
 | Research Agility | Low ceremony for experimental math | Faster iteration on novel ideas |
-| Ergonomic Defaults | Inferred shapes, auto loss/metrics, safe inits | 10–20 line usable models |
+| Ergonomic Defaults | Inferred shapes, auto loss/metrics, safe inits | usable models |
 | Transparency | No heavy magic, explicit when complex | Debuggable & teachable |
 
 ## 3. Quick Glance

@@ -24,3 +24,7 @@ class Dropout(Layer):
             return Tensor(x.data * mask, requires_grad=x.requires_grad)
         
         return x
+    
+    def count_params(self):
+        """Dropout has no parameters."""
+        return 0

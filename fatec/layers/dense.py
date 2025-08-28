@@ -173,8 +173,11 @@ class Dense(Layer):
     
     def count_params(self):
         """Count total number of parameters."""
-        params = self.weight.data.size
-        if self.use_bias:
+        if not self.built:
+            return 0
+            
+        params = self.weight.data.size if self.weight else 0
+        if self.use_bias and self.bias:
             params += self.bias.data.size
         return params
     
