@@ -37,7 +37,14 @@ class Trainer:
                     pred_data = predictions
                 
                 loss = self.loss_fn(pred_data, batch_y)
-                total_loss += loss
+                
+                # Convert loss to float if it's a Tensor
+                if hasattr(loss, 'data'):
+                    loss_value = float(loss.data)
+                else:
+                    loss_value = float(loss)
+                
+                total_loss += loss_value
                 n_batches += 1
                 
                 # Simple gradient update (placeholder)

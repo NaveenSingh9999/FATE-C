@@ -19,6 +19,18 @@ Make neural architecture creation as simple as writing plain Python functions wh
 | Transparency | No heavy magic, explicit when complex | Debuggable & teachable |
 
 ## 3. Quick Glance
+
+### 🚀 Universal Training (NEW!)
+```python
+import fatec as fc
+
+# Build and train in 3 lines!
+model = fc.build("task", name="classifier", input_dim=784, num_classes=10)
+trained_model = fc.train(model, X, y, epochs=10, metrics=["accuracy"])
+results = fc.evaluate(trained_model, X_test, y_test)
+```
+
+### 🏗️ Traditional Approach
 ```python
 import fatec as fc
 
@@ -32,6 +44,17 @@ model = fc.seq([
 model.compile()              # infers loss = cross_entropy, opt = adam
 model.fit(train_x, train_y, epochs=5, val=(val_x, val_y))
 model.save("mlp.ftc")
+```
+
+### 🎯 Build System
+```python
+import fatec as fc
+
+# Config-driven approach
+model = fc.build("network", layers=[
+    {"type": "Dense", "units": 128, "activation": "smart_relu"},
+    {"type": "Dense", "units": 10, "activation": "softmax"}
+])
 ```
 
 ## ⚡ Quick Installation

@@ -54,6 +54,9 @@ from .models.base import BaseModel
 from .training.trainer import Trainer
 from .training.enhanced import EnhancedTrainer
 
+# Universal training function
+from .train import train, evaluate, train_numpy, train_pytorch, train_tensorflow
+
 # Build System - Universal API
 from .build import build, seq, Model, Neuron
 from .build import Dense as DenseBuilder, Dropout as DropoutBuilder
@@ -71,5 +74,5 @@ __all__ = [
     'neuron', 'get_neuron',
     'Dense', 'Dropout', 'Layer',
     'Sequential', 'BaseModel', 'seq', 'build', 'Model', 'Neuron',
-    'Trainer', 'SGD', 'Adam'
+    'Trainer', 'SGD', 'Adam', 'train', 'evaluate'
 ]
